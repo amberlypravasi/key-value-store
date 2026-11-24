@@ -7,7 +7,7 @@ and a network server.
 > SET name Amber
 OK
 > GET name
-Alisha
+Amber
 > DEL name
 1
 > GET name
@@ -57,7 +57,7 @@ Tests use [doctest](https://github.com/doctest/doctest) v2.4.11, included as
 | `include/kvstore/store.h`, `src/store.cpp` | The store itself: a hash map, plus saving to and loading from the log |
 | `include/kvstore/log.h`, `src/log.cpp` | Write-ahead log format: encoding and decoding entries |
 | `include/kvstore/crc32.h`, `src/crc32.cpp` | CRC-32 checksums for detecting damaged entries |
-| `include/kvstore/command.h`, `src/command.cpp` | Turns a line like `SET name Alisha` into a command |
+| `include/kvstore/command.h`, `src/command.cpp` | Turns a line like `SET name Amber` into a command |
 | `include/kvstore/handler.h`, `src/handler.cpp` | Runs a command and builds the response; shared by the command line and server |
 | `include/kvstore/server.h`, `src/server.cpp` | TCP server with one thread per client |
 | `src/main.cpp` | Interactive command line |
@@ -88,7 +88,7 @@ data. The log stays easy to inspect with `cat`:
 
 ```
 S 4 6 93e5c202
-nameAlisha
+nameAmber
 D 4 0142347e
 name
 ```
