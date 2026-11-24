@@ -4,7 +4,7 @@ A key-value database built from scratch in C++20, with saving to disk, crash rec
 and a network server.
 
 ```
-> SET name Alisha
+> SET name Amber
 OK
 > GET name
 Alisha
